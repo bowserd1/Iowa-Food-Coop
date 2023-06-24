@@ -8,4 +8,4 @@ The IFC is located in Des Moines, IA and connects customers to local farms aroun
 The data for this project all came from the IFC's database, and I was able to access the database using SQL queries once I was given access to the database. Some of the sales data is available to be downloaded from the website in a csv file with the right access. I used both a csv download and data acquired from SQL queries for this project. The raw data is confidential.
 
 ## 2. Data Wrangling and Exploratory Analysis
-
+The data wrangling can be found in two files in this repository, and the exploratory analysis can be found in another notebook.
