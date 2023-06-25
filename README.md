@@ -34,4 +34,10 @@ I began the exploratory analysis by visualizing where customers live. This heatm
 
 
 
+![Sales_by_location](https://github.com/bowserd1/Iowa-Food-Coop/assets/120436824/316059aa-8825-4d91-9f10-3b8460131797)
+
+
+![Orders_by_years](https://github.com/bowserd1/Iowa-Food-Coop/assets/120436824/387f1090-a5aa-4ef0-8e93-702c4349fbc3)
+
+
 
