@@ -39,7 +39,7 @@ The following graph shows how much customers spend at each of the different pick
 This final graph shows the number of people who ordered during the most recent ordering period and places them into bins based on how many years they have been a member.
 ![Orders_by_years](https://github.com/bowserd1/Iowa-Food-Coop/assets/120436824/387f1090-a5aa-4ef0-8e93-702c4349fbc3)
 
-Each of these graphs starts to give us a better feel for who the customers.
+Each of these graphs starts to give us a better feel for who the customers are.
 
 ## 5. Preprocessing
 
