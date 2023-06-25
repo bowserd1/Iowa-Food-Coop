@@ -32,12 +32,14 @@ The data wrangling can be found in two files in this repository. A few challenge
 I began the exploratory analysis by visualizing where customers live. This heatmap shows where customers live who purchased during the most recent ordering period. The red indicates more dollars spent.
 ![Screen Shot 2023-06-25 at 1 13 08 PM](https://github.com/bowserd1/Iowa-Food-Coop/assets/120436824/d18475a2-fee4-4f1c-a254-43248fb6832d)
 
-
+The following graph shows how much customers spend at each of the different pickup locations:
 
 ![Sales_by_location](https://github.com/bowserd1/Iowa-Food-Coop/assets/120436824/316059aa-8825-4d91-9f10-3b8460131797)
 
-
+This final graph shows the number of people who ordered during the most recent ordering period and places them into bins based on how many years they have been a member.
 ![Orders_by_years](https://github.com/bowserd1/Iowa-Food-Coop/assets/120436824/387f1090-a5aa-4ef0-8e93-702c4349fbc3)
 
+Each of these graphs starts to give us a better feel for who the customers.
 
+## 5. Preprocessing
 
