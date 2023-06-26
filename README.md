@@ -62,11 +62,19 @@ At this stage several decisions were made about how to proceed:
 ## 6. Modelling
 Moving into the modelling stage, I decided to try a random forest regression and xgboost regression. As I mentioned previously, the rows in this problem are not independent, making it not a great candidate for linear regression. 
 
-For accuracy metrics, I decided to evaluate the models using root mean squared error because of how the IFC plans to use this project. This will penalize the model for having predictions that are farther from reality. (Once I predict the amount each customer will buy, the IFC plans to offer incentives to people to increase their purchase amount. If the model is off by a small amount it isn't as much of a problem. Consider the following situation: if the model predicts a customer will spend $20 next week, but they will actually already spend $150, giving them an incentive like $20 off your next order of $100 will cost the IFC money because they were already going to spend $100. However, if the model predict someone will spend $20, and they are acutally going to spend $50, the model is off by $20, but the incentive will still provide benefit to the IFC).
+For accuracy metrics, I decided to evaluate the models using root mean squared error (rmse) because of how the IFC plans to use this project. This will penalize the model for having predictions that are farther from reality. (Once I predict the amount each customer will buy, the IFC plans to offer incentives to people to increase their purchase amount. If the model is off by a small amount it isn't as much of a problem. Consider the following situation: if the model predicts a customer will spend $20 next week, but they will actually already spend $150, giving them an incentive like $20 off your next order of $100 will cost the IFC money because they were already going to spend $100. However, if the model predict someone will spend $20, and they are acutally going to spend $50, the model is off by $20, but the incentive will still provide benefit to the IFC).
 
+For all models, I did not use the standard k-fold validation library from sci-kit learn because the data is time based and shuffling the rows would cause the output to be invalid. Instead, I used randomized search to optimize the hyperparameters and used my validation data set as the data on which to optimize these hyperparameters. The following code does that for the XGBoost model:
 
+![Screen Shot 2023-06-26 at 2 29 56 PM](https://github.com/bowserd1/Iowa-Food-Coop/assets/120436824/57d4a820-5709-497f-b282-e9685998c973)
 
+After training the models and tuning hyperparameters using the validation set, I combined the training and validation sets and fit the models on that data before finally running the optimized test set.
 
+Also, after training the models and comparing them against the baseline predictions (4,6 and 8 week rolling averages), I noticed that neither of my machine learning models learned as quickly when a customer stopped ordering, or churned. In order to experiment with this, I added two more models which mixed the 8-week rolling average with both random forest and XGBoost. Anywhere that the 8-week rolling average was 0, I made these models predict 0, while anywhere else I left the random forest and XGBoost the same. This comes with a risk of overfitting on future data, but it also recognizes that once a customer stops ordering, they are far less likely to order again.
+
+Evaluating the models based on the rmse, random forest had the best predictions on the training data, although its performance fell off significantly on the test data, suggesting some overfitting. The best model on the test data turned out to be the XGBoost model mixed with the rolling 8-week average.
+
+![Model_Metrics](https://github.com/bowserd1/Iowa-Food-Coop/assets/120436824/812a2e32-e64f-497e-872f-5137366020c6)
 
 
 
