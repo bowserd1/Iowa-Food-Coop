@@ -36,8 +36,11 @@ The following graph shows how much customers spend at each of the different pick
 
 ![Sales_by_location](https://github.com/bowserd1/Iowa-Food-Coop/assets/120436824/316059aa-8825-4d91-9f10-3b8460131797)
 
-This final graph shows the number of people who ordered during the most recent ordering period and places them into bins based on how many years they have been a member.
+This graph shows the number of people who ordered during the most recent ordering period and places them into bins based on how many years they have been a member.
 ![Orders_by_years](https://github.com/bowserd1/Iowa-Food-Coop/assets/120436824/387f1090-a5aa-4ef0-8e93-702c4349fbc3)
+
+Lastly, this histogram shows how much customers spent in the most recent ordering period.
+![Orders_Last_Period](https://github.com/bowserd1/Iowa-Food-Coop/assets/120436824/30ad9f84-7ba2-403a-8f09-3fb3a08ef4df)
 
 Each of these graphs starts to give us a better feel for who the customers are.
 
