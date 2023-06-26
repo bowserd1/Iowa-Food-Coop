@@ -39,10 +39,10 @@ The following graph shows how much customers spend at each of the different pick
 This graph shows the number of people who ordered during the most recent ordering period and places them into bins based on how many years they have been a member.
 ![Orders_by_years](https://github.com/bowserd1/Iowa-Food-Coop/assets/120436824/387f1090-a5aa-4ef0-8e93-702c4349fbc3)
 
-Lastly, this histogram shows how much customers spent in the most recent ordering period.
+Lastly, this histogram shows how much customers spent in the most recent ordering period. We can see here that member orders have a right tail where most people who place an order spend less than $75, but a few customers spend over $200.
+
 ![Orders_Last_Period](https://github.com/bowserd1/Iowa-Food-Coop/assets/120436824/30ad9f84-7ba2-403a-8f09-3fb3a08ef4df)
 
-Each of these graphs starts to give us a better feel for who the customers are.
 
 ## 5. Preprocessing
 At this stage several decisions were made about how to proceed:
@@ -60,6 +60,14 @@ At this stage several decisions were made about how to proceed:
 **4.** Finally, there were several categorical variables that I one-hot-encoded to prepare for modelling. These varibles included: customer pick up locations, how the customer heard about the IFC, and the customer's membership status.
 
 ## 6. Modelling
+Moving into the modelling stage, I decided to try a random forest regression and xgboost regression. As I mentioned previously, the rows in this problem are not independent, making it not a great candidate for linear regression. 
+
+For accuracy metrics, I decided to evaluate the models using root mean squared error because of how the IFC plans to use this project. This will penalize the model for having predictions that are farther from reality. (Once I predict the amount each customer will buy, the IFC plans to offer incentives to people to increase their purchase amount. If the model is off by a small amount it isn't as much of a problem. Consider the following situation: if the model predicts a customer will spend $20 next week, but they will actually already spend $150, giving them an incentive like $20 off your next order of $100 will cost the IFC money because they were already going to spend $100. However, if the model predict someone will spend $20, and they are acutally going to spend $50, the model is off by $20, but the incentive will still provide benefit to the IFC).
+
+
+
+
+
 
 
 
