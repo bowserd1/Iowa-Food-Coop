@@ -43,6 +43,7 @@ Each of these graphs starts to give us a better feel for who the customers are.
 
 ## 5. Preprocessing
 At this stage several decisions were made about how to proceed:
+
 **1.** I dropped all members who had never ordered. This effects members who have never ordered (over 5,000 people), and when using this in production in the future, it will effect new customers because there will be no predictions for them. Essentially, I decided to not set a coldstart value and wait to get more data before making a prediction. Only 16% of members have made an order in the last 2+ years, so it made the most sense to start without a prediction.
 
 **2.** Next, set up some dummy predictions as a baseline for the model. I added columns of a 4-week rolling average, 6-week rolling average, and and 8-week rolling average. Since all of these contain information, I left them in as features for the model as well.
