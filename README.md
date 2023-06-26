@@ -48,7 +48,9 @@ At this stage several decisions were made about how to proceed:
 
 **2.** Next, set up some dummy predictions as a baseline for the model. I added columns of a 4-week rolling average, 6-week rolling average, and and 8-week rolling average. Since all of these contain information, I left them in as features for the model as well.
 
-**3** Since all of the data is time-based, I needed to be very careful about setting up the training, validation and test data sets. To set this up correctly, I took the earliest 70% of orders for each customers as the training set, the next 15% for each customer as the validation set, and the last 15% of data as the test set. After grouping the dataframe by member ID and sorting by date, I used the following code to split the dataframe into train, validation and test sets:![Screen Shot 2023-06-25 at 8 52 36 PM](https://github.com/bowserd1/Iowa-Food-Coop/assets/120436824/42c3531f-d1b3-4776-afb7-eec300cc69ab)
+**3** Since all of the data is time-based, I needed to be very careful about setting up the training, validation and test data sets. To set this up correctly, I took the earliest 70% of orders for each customers as the training set, the next 15% for each customer as the validation set, and the last 15% of data as the test set. After grouping the dataframe by member ID and sorting by date, I used the following code to split the dataframe into train, validation and test sets:
+
+![Screen Shot 2023-06-25 at 8 52 36 PM](https://github.com/bowserd1/Iowa-Food-Coop/assets/120436824/42c3531f-d1b3-4776-afb7-eec300cc69ab)
 
 
 
