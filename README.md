@@ -85,8 +85,11 @@ Finally, the top 15 most important features are shown below.
 ## 7. Conclusion and Further Work
 
 The Iowa Food Coop now has a model that will help them to build a marketing campaign where they can incentivize customers to spend more money there. Moving forward, there are several projects that can build on this work in the future:
+
 **1.** Once the IFC determines a marketing plan, we can randomly assign a control group and a test group for which customers get the incentives. Hypothesis testing can be done to determine whether or not the marketing campaign was efective.
+
 **2.** A second project that uses the identical data would be to predict whether or not a customer will be active 12 months later. This project would use the same data and wouldn't need a lot of data manipulation to get the data in place to make these predictions. The goal of this project would be more focused around interpretability and understanding the role each feature plays in a customer being active after 1 year, so that the IFC can focus their marketing efforts during the early weeks of the customers' journeys.
+
 **3.** Lastly, a recommendation system could be built to encourage customers to buy more products.
 
 In conclusion, this project serves as a nice foundation to show the IFC what can be done with their data in the realm of machine learning. Racther than being a one-time project exploring the realm of meachine learning, the IFC can find benefit in several more machine learning applications.
