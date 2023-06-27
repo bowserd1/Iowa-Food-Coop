@@ -84,3 +84,8 @@ Finally, the top 15 most important features are shown below.
 
 ## 7. Conclusion and Further Work
 
+The Iowa Food Coop now has a model that will help them to build a marketing campaign where they can incentivize customers to spend more money there. Moving forward, there are several projects that can build on this work in the future:
+**1.** Once the IFC determines a marketing plan, we can randomly assign a control group and a test group for which customers get the incentives. Hypothesis testing can be done to determine whether or not the marketing campaign was efective.
+**2.** 
+
+
