@@ -72,10 +72,10 @@ After training the models and tuning hyperparameters using the validation set, I
 
 Also, after training the models and comparing them against the baseline predictions (4,6 and 8 week rolling averages), I noticed that neither of my machine learning models learned as quickly when a customer stopped ordering, or churned. In order to experiment with this, I added two more models which mixed the 8-week rolling average with both random forest and XGBoost. Anywhere that the 8-week rolling average was 0, I made these models predict 0, while anywhere else I left the random forest and XGBoost the same. This comes with a risk of overfitting on future data, but it also recognizes that once a customer stops ordering, they are far less likely to order again.
 
-Evaluating the models based on the rmse, random forest had the best predictions on the training data, although its performance fell off significantly on the test data, suggesting some overfitting. The best model on the test data turned out to be the XGBoost model mixed with the rolling 8-week average.
+Evaluating the models based on the rmse, random forest had the best predictions on the training data, although its performance fell off significantly on the test data, suggesting some overfitting. The best model on the test data was the XGBoost model mixed with the rolling 8-week average.
 
 ![Model_Metrics](https://github.com/bowserd1/Iowa-Food-Coop/assets/120436824/812a2e32-e64f-497e-872f-5137366020c6)
 
-
+One interesting thing to note is that all models (including the baseline values) increased in accuracy from the training set to the test set. Although this isn't typical with machine learning, it makes sense for this specific business problem. The data starts during the Covid-19 pandemic when many customers were ordering (around 300 per ordering period) while more recently, this has dropped to about 200 orders per ordering period. As fewer people order, it is easier for all of the models to predict zeroes for the people who haven't ordered in a long time.
 
 
