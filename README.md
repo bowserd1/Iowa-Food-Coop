@@ -78,4 +78,10 @@ Evaluating the models based on the rmse, random forest had the best predictions 
 
 One interesting thing to note is that all models (including the baseline values) increased in accuracy from the training set to the test set. Although this isn't typical with machine learning, it makes sense for this specific business problem. The data starts during the Covid-19 pandemic when many customers were ordering (around 300 per ordering period) while more recently, this has dropped to about 200 orders per ordering period. As fewer people order, it is easier for all of the models to predict zeroes for the people who haven't ordered in a long time.
 
+Finally, the top 15 most important features are shown below.
+
+![best_features](https://github.com/bowserd1/Iowa-Food-Coop/assets/120436824/0d4f3198-975e-4044-9dc0-d194ff269419)
+
+## 7. Conclusion and Further Work
+
 
