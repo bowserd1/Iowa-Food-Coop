@@ -93,4 +93,4 @@ The Iowa Food Coop now has a model that will help them to build a marketing camp
 
 **3.** Lastly, a recommendation system could be built to encourage customers to buy more products.
 
-In conclusion, this project serves as a nice foundation to show the IFC what can be done with their data in the realm of machine learning. Racther than being a one-time project exploring the realm of meachine learning, the IFC can find benefit in several more machine learning applications.
+In conclusion, this project serves as a nice foundation to show the IFC what can be done with their data in the realm of machine learning. Rather than being a one-time project exploring the realm of meachine learning, the IFC can find benefit in several more machine learning applications.
