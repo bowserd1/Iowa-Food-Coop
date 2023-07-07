@@ -19,6 +19,7 @@ The data contains sales data for every purchase since early 2021. Every sale is 
 
 ## 3. Data Wrangling
 The data wrangling can be found in two files in this repository. A few challenges in data wrangling and cleaning are outlined below:
+
 **1.** The sales data had a row for every sale made, so the sales needed to be grouped by customer and by ordering period. When grouping the data, however, we lose information about the individual items that each customer purchased. In the database, every purchase has a category, subcategory and the item. I made each category a feature in the dataframe, and used pivot tables to extract the sales by week and category for each customer. This was then joined back into the dataframe. Thus, the new dataframe shows us how much each customer had spent within a certain cateogry on date. There are about 20 categories and examples of these categories include: Produce, Meat-Beef, Meat-Pork, and Prepared Foods.
 
 **2.** Once the sales were grouped by category and week, I needed to sum the columns cumulatively for each customer so that we could see how much the customer had spent within each category up to any given date. To avoid data leakage, all the sales information also needed to be shifted back by one ordering period. This is extremely important so that we avoid using future data to predict sales for the given week.
